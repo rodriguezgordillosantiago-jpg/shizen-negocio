@@ -6,13 +6,6 @@
         </div>
     </div>
 
-    @if (session('success'))
-        <div class="alert alert-success"><i class="bx bx-check-circle" style="font-size:18px;flex-shrink:0"></i> {{ session('success') }}</div>
-    @endif
-    @if ($errors->any())
-        <div class="alert alert-danger"><i class="bx bx-error-circle" style="font-size:18px;flex-shrink:0"></i> {{ $errors->first() }}</div>
-    @endif
-
     <div style="display:grid;grid-template-columns:1fr 2fr;gap:24px;margin-bottom:24px">
 
         {{-- Columna izquierda: Avatar e Info del Negocio --}}

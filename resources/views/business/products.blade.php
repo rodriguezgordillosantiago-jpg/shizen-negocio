@@ -8,13 +8,6 @@
         <button class="btn btn-primary" onclick="openProductModal()"><i class="bx bx-plus"></i> Agregar producto</button>
     </div>
 
-    @if (session('success'))
-        <div class="alert alert-success"><i class="bx bx-check-circle" style="font-size:18px;flex-shrink:0"></i> {{ session('success') }}</div>
-    @endif
-    @if ($errors->any())
-        <div class="alert alert-danger"><i class="bx bx-error-circle" style="font-size:18px;flex-shrink:0"></i> {{ $errors->first() }}</div>
-    @endif
-
     {{-- Toolbar de filtros --}}
     <div class="toolbar">
         <div class="search-wrap">

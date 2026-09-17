@@ -6,13 +6,6 @@
         </div>
     </div>
 
-    @if (session('success'))
-        <div class="alert alert-success">
-            <i class="bx bx-check-circle" style="font-size:18px;flex-shrink:0"></i>
-            {{ session('success') }}
-        </div>
-    @endif
-
     <form method="post" action="{{ route('business.settings.update') }}">
         @csrf
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">

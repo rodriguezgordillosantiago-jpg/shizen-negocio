@@ -20,13 +20,6 @@
         @endif
     </div>
 
-    @if (session('success'))
-        <div class="alert alert-success"><i class="bx bx-check-circle" style="font-size:18px;flex-shrink:0"></i> {{ session('success') }}</div>
-    @endif
-    @if ($errors->any())
-        <div class="alert alert-danger"><i class="bx bx-error-circle" style="font-size:18px;flex-shrink:0"></i> {{ $errors->first() }}</div>
-    @endif
-
     {{-- Rejilla de pedidos con el mismo estilo de las tarjetas de los platos --}}
     <div id="ordersGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px;width:100%">
         @forelse ($orders as $order)
@@ -203,4 +196,3 @@
     }
     </script>
 </x-business-layout>
-
