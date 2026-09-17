@@ -304,7 +304,7 @@ class BusinessController extends Controller
             'id_cocina_negocio_asociado' => $businessId,
         ]);
 
-        return back()->with('success', '🧑‍🍳 Cuenta de Sub-Rol Cocina (' . $data['email'] . ') registrada exitosamente.');
+        return back()->with('success', '🧑‍🍳 Cuenta de Cocina (' . $data['email'] . ') registrada exitosamente.');
     }
 
     public function storeProduct(Request $request): RedirectResponse

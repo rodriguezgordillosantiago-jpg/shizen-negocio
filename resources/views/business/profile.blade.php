@@ -84,12 +84,12 @@
                 </div>
             </div>
 
-            {{-- Registrar Sub-Rol de Cocina --}}
+            {{-- Registrar Cocina --}}
             <div class="card" style="border:2px solid #bfdbfe">
                 <div class="card-header" style="background:#eff6ff">
                     <div>
                         <div class="card-title" style="color:#1e40af;display:flex;align-items:center;gap:8px">
-                            🧑‍🍳 Registrar Sub-Rol de Cocina
+                            🧑‍🍳 Registrar Cocina
                         </div>
                         <div class="card-subtitle" style="color:#3b82f6">
                             Crea usuarios dedicados exclusivamente a la vista de cocina para tu negocio
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary" type="submit" style="background:#2563eb;border:none">
-                            <i class="bx bx-plus-circle"></i> Registrar Sub-Rol Cocina
+                            <i class="bx bx-plus-circle"></i> Registrar Cocina
                         </button>
                     </form>
 
