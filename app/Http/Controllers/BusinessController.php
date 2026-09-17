@@ -294,8 +294,10 @@ class BusinessController extends Controller
 
         $businessId = $this->businessId($request);
         $parts = preg_split('/\s+/', trim($data['nombre']), 2);
+        $nextUserId = ((int) DB::table('usuario')->max('id_usuario')) + 1;
 
         DB::table('usuario')->insert([
+            'id_usuario' => $nextUserId,
             'nombre' => $parts[0] ?? $data['nombre'],
             'apellido' => $parts[1] ?? 'Cocina',
             'email' => strtolower(trim($data['email'])),
@@ -401,7 +403,7 @@ class BusinessController extends Controller
             'descripcion'  => ['nullable', 'string'],
             'precio'       => ['required', 'integer', 'min:1000'],
             'stock'        => ['required', 'integer', 'min:0'],
-            'imagen_url'   => ['nullable', 'url', 'max:255'],
+            'imagen_url'   => ['nullable', 'string', 'max:255'],
             'id_categoria' => ['nullable', 'integer', 'exists:categorias,id_categoria'],
             'descuento_pct'=> ['nullable', 'integer', 'min:0', 'max:50'],
         ]);
